@@ -1,8 +1,10 @@
+const dotenv = require('dotenv').config()
 const express = require('express')
-const app = express()
 const authRoutes = require('./routes/auth-routes')
+const passportSetup = require('./config/passport-setup')
 const port = 3000
 
+const app = express()
 //set up view engine
 app.set('view engine', 'ejs')
 
