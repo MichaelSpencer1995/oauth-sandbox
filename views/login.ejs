@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            nav {
+                background: salmon;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 250px;
+            }
+            
+            li {
+                list-style: none;
+            }
+        
+            a {
+                text-decoration: none;
+                color: white;
+                padding: .5em .9em;
+                background: #ff6554;
+                border: #ffffff70 1px solid;
+                border-radius: 3px;
+            }
+
+            main {
+                padding-left: 50px;
+            }
+        </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/auth/logout">Logout</a></li>
+            <li><a href="/auth/login">Login</a></li>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Login using...</h2>
+    
+        <a href="/auth/google">Google+</a>
+    </main>
+</body>
+</html>
