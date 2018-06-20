@@ -2,11 +2,16 @@ const dotenv = require('dotenv').config()
 const express = require('express')
 const authRoutes = require('./routes/auth-routes')
 const passportSetup = require('./config/passport-setup')
-const port = 3000
+const mongoose = require('mongoose')
 
+const port = 3000
 const app = express()
 //set up view engine
 app.set('view engine', 'ejs')
+
+mongoose.connect('mongodb://localhost/oauth-test', () => {
+    console.log('Connected to mongodb')
+})
 
 // set up routes
 app.use('/auth', authRoutes)
@@ -17,5 +22,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Connect to port ${ port }`)
+    console.log(`Connected to port ${ port }`)
 })
