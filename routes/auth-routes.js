@@ -18,7 +18,8 @@ router.get('/google', passport.authenticate('google', {
 
 // callback route for google to redirect to
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-    res.send('YOUVE REACHED THE CALLBACK URI')
+    // the cookie is holding the id in the req object.user thanks to passport
+    res.redirect('/profile/')
 })
 
 module.exports = router
