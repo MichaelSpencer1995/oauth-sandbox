@@ -46,14 +46,18 @@
 <body>
     <nav>
         <ul>
+            <% if(user) { %>
             <li><a href="/auth/logout">Logout</a></li>
+            <% } else { %>
             <li><a href="/auth/login">Login</a></li>
+            <% } %>
             <li><a href="/">Home</a></li>
+            <li><a href="/Profile">Profile</a></li>
         </ul>
     </nav>
     <main>
         <h2>Login using...</h2>
-    
+
         <a href="/auth/google">Google+</a>
     </main>
 </body>

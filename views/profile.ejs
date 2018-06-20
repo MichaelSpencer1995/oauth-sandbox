@@ -41,6 +41,12 @@
     main {
         padding-left: 40px;
     }
+
+    .profile-image {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
 </style>
 </head>
 <body>
@@ -55,10 +61,13 @@
             <li><a href="/Profile">Profile</a></li>
         </ul>
     </nav>
-    <main>
-        <h2>Oauth Sandbox</h2>
     
-        <p>Home Page</p>
+    <main>
+        <h2>Your Profile</h2>
+        
+        <img class="profile-image" src="<%= user.thumbnail %>">
+
+        <p>You are signed in as: <strong><%= user.username %></strong></p>
     </main>
 </body>
 </html>
